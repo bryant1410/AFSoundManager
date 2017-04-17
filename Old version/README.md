@@ -10,7 +10,7 @@ iOS audio playing (both local and streaming) and recording made easy through a c
 
 ![alt text](https://raw.github.com/AlvaroFranco/AFSoundManager/master/preview.png "Preview")
 
-##Installation
+## Installation
 
 AFSoundManager is available on CocoaPods so you can get it by adding this line to your Podfile:
 
@@ -25,7 +25,7 @@ If you don't use CocoaPods, you will have to import these files into your projec
 
 Also, you need to import the ```AudioToolbox``` framework and te ```AudioFoundation``` framework.
 
-##Usage
+## Usage
 
 First of all, make sure that you have imported the main class into the class where you are going to play audio.
 
@@ -33,7 +33,7 @@ First of all, make sure that you have imported the main class into the class whe
 
 Then, you only need to call one method to start playing your audio.
 
-###Local playing
+### Local playing
 If you need to play a local file, call ```-startPlayingLocalFileWithName:atPath:withCompletionBlock:```. If you want to use the default path, just set it as ```nil```.
 
 Example:
@@ -47,7 +47,7 @@ Example:
         }
     }];
 
-###Audio streaming
+### Audio streaming
 For remote audio, call ```-startStreamingRemoteAudioFromURL:andBlock:```
 
 Example:
@@ -61,7 +61,7 @@ Example:
         }
     }];
 
-###Control
+### Control
 If you need to pause, resume or stop the current playing, guess what, there's a method for that!
 
 	[[AFSoundManager sharedManager]pause];
@@ -89,7 +89,7 @@ In order to change the volume, call ```-changeVolumeToValue:``` by passing a dec
 
 	[[AFSoundManager sharedManager] changeVolumeToValue:0.750000]; //This will put the volume at 75%
 
-###Playing status
+### Playing status
 
 In order to get noticed of the playing status changes, you need to implement the *AFSoundManagerDelegate* by adding it to your class, just like other delegates.
 
@@ -123,7 +123,7 @@ Then, just implement the ```currentPlayingStatusChanged:``` method in the class 
 	
 Handle the change in each case.
 
-###Background playing
+### Background playing
 
 If you want to enable background playing, make sure you have Background Modes enabled on your project, under the Capabilities section:
 
@@ -133,7 +133,7 @@ Also, add this information to your info.plist file:
 
 ![alt text](https://raw.github.com/AlvaroFranco/AFSoundManager/master/plist-data.png "")
 
-###Output manage
+### Output manage
 AFSoundManager also lets you choose which device do you want to use to play the audio. I mean, even if you have your headphones plugged in, you can force the audio to play on the built-in speakers or play it through the headphones.
 
 If the headphones (or any external speaker) are plugged in and you want to play it on the built-in speakers, call:
@@ -152,7 +152,7 @@ And if you want to check if the headphones, or a external speaker, are currently
 		//Headphones NOT connected
 	}
 
-##Recording audio
+## Recording audio
 
 Start recording audio from the device's microphone is easy peasy!
 
@@ -160,7 +160,7 @@ Start recording audio from the device's microphone is easy peasy!
 
 **If you don't want recording to stop automatically**, set shouldStopAtSecond as **0** or **nil**.
 
-###Control the recording
+### Control the recording
 
 AFSoundManager let's you perform several actions with your current recording:
 
@@ -171,8 +171,8 @@ AFSoundManager let's you perform several actions with your current recording:
 
 Lastly, to get the current recording duration, call ```-timeRecorded``` which will return a NSTimeInterval object.
 
-##License
+## License
 AFSoundManager is under MIT license so feel free to use it!
 
-##Author
+## Author
 Made by Alvaro Franco. If you have any question, feel free to drop me a line at [alvarofrancoayala@gmail.com](mailto:alvarofrancoayala@gmail.com)

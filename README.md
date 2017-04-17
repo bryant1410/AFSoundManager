@@ -10,15 +10,15 @@ AFSoundManager v2
 
 iOS audio playing (both local and streaming) and recording made easy through a complete and block-driven Objective-C class. AFSoundManager uses AudioToolbox and AVFoundation frameworks to serve the audio.
 
-##Installation
+## Installation
 
-###CocoaPods
+### CocoaPods
 
 AFSoundManager is available on CocoaPods so you can get it by adding this line to your Podfile:
 
 	pod 'AFSoundManager'
 
-###Manual
+### Manual
 
 If you don't use CocoaPods, you will have to import these files into your project:
 
@@ -36,7 +36,7 @@ If you don't use CocoaPods, you will have to import these files into your projec
 	
 Also, you need to import AVFoundation, AudioToolbox and MediaPlayer frameworks.
 
-##Roadmap
+## Roadmap
 
 Since the v2.0 is a very first version, there's a lot of work remaining. This is a sneak peek of what's coming soon:
 
@@ -45,9 +45,9 @@ Since the v2.0 is a very first version, there's a lot of work remaining. This is
 * [ ] A brand new class to let AFSoundPlayback handle real time effects like delay, a customized EQ, etc.
 * [ ] AFSoundManager-ready UI controls to integrate a fulfilled play control in your app at a glance, powered by AFSoundManager.
 
-##Usage
+## Usage
 
-###Playing a sound
+### Playing a sound
 
 ```AFSoundItem``` will take care of any sound item, and it will be handled by ```AFSoundPlayback```. The ```AFSoundItem``` will contain the location and the metadata of each sound, song, chapter, etc.
 
